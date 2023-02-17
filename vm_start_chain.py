@@ -12,7 +12,7 @@ def on_connect(client, userdata, flags, rc):
 def on_message_pong(client, userdata, msg):
 
     print("Custom Callback" + str(msg.payload.decode("utf-8")))
-    client.publish("linuslei/ping", (msg.payload.decode())+1)
+    client.publish("linuslei/ping", int(msg.payload.decode())+1)
     print("Ping")
     time.sleep(4)
 
