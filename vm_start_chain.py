@@ -43,7 +43,7 @@ if __name__ == '__main__':
     incoming and outgoing mqtt messages."""
 
     #replace user with your USC username in all subscriptions
-    client.publish("linuslei/ping", f"{load_ping}")
+    client.publish("linuslei/ping", 1)
     print("Ping")
     time.sleep(4)
     client.loop_forever()
