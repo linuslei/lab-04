@@ -14,7 +14,7 @@ def on_message_pong(client, userdata, msg):
     print("Custom Callback" + str(msg.payload.decode("utf-8")))
     client.publish("linuslei/ping", int(msg.payload.decode())+1)
     print("Ping")
-    time.sleep(4)
+    time.sleep(1)
 
 if __name__ == '__main__':
     #get IP address
@@ -45,5 +45,5 @@ if __name__ == '__main__':
     #replace user with your USC username in all subscriptions
     client.publish("linuslei/ping", 1)
     print("Ping")
-    time.sleep(4)
+    time.sleep(1)
     client.loop_forever()
